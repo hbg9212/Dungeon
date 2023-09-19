@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632771c6cac97aa49abec15d04329b02, type: 3}
+  m_Name: Sword_Diamond
+  m_EditorClassIdentifier: 
+  displayName: "\uB2E4\uC774\uC544\uBAAC\uB4DC \uAC80"
+  description: "\uAC15\uB825\uD55C \uAD11\uC11D\uC778 \uB2E4\uC774\uC544\uBAAC\uB4DC\uB85C
+    \uB9CC\uB4E4\uC5B4\uC9C4 \uAC80"
+  type: 0
+  icon: {fileID: 21300000, guid: fc0befe4a1632f546993ff730c4fca6f, type: 3}
+  stats:
+  - type: 1
+    value: 15
+  equipPrefab: {fileID: 6158142683267939363, guid: eae917d06ac773c4894f1fb2b6d246a6, type: 3}
