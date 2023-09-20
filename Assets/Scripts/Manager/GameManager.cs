@@ -6,19 +6,21 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public UIManager uIManager;
+    public PlayerInfoSO playerInfo;
 
     private void Awake()
     {
         instance = this;
-        uIManager = GetComponentInChildren<UIManager>();
     }
 
     private void Start()
     {
-        uIManager.SetName("new User");
-        uIManager.SetLevel(1);
-        uIManager.AddGold(5000);
+        if(playerInfo.name == "" || playerInfo.name == null)
+        {
+            playerInfo.name = "new Player";
+            playerInfo.level = 1;
+            playerInfo.gold = 5000;
+        }
     }
 
 }

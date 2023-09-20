@@ -5,11 +5,12 @@ using TMPro;
 using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
-    private string _name;
-    private int _level = 0;
-    private float _exp = 0f;
-    private float _nextExp;
-    private int _gold;
+    private PlayerInfoSO playerInfo;
+
+    private void Awake()
+    {
+        playerInfo = GameManager.instance.playerInfo;
+    }
 
     [SerializeField] private ExpSO expData;
     [SerializeField] private TextMeshProUGUI nameText;
@@ -17,54 +18,56 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldText;
     [SerializeField] private Slider expSlider;
 
-    public void SetName(string name)
+    private void Start()
     {
-        _name = name;
         UIUpdateName();
+        UIUpdateLevel();
+        UIUpdategold();
+        UIUpdateExp();
     }
 
     public void SetLevel(int level)
     {
-        _level = level;
-        _nextExp = expData.nextExp[level];
+        playerInfo.level = level;
+        playerInfo.nextExp = expData.nextExp[level];
         UIUpdateLevel();
         AddExp(0f);
     }
 
     public void AddExp(float exp)
     {
-        _exp += exp;
-        if(_nextExp <= _exp)
+        playerInfo.exp += exp;
+        if(playerInfo.nextExp <= playerInfo.exp)
         {
-            _exp -= _nextExp;
-            SetLevel(++_level);
+            playerInfo.exp -= playerInfo.nextExp;
+            SetLevel(++playerInfo.level);
         }
         UIUpdateExp();
     }
 
     public void AddGold(int gold)
     {
-        _gold += gold;
+        playerInfo.gold += gold;
         UIUpdategold();
     }
 
     private void UIUpdateName()
     {
-        nameText.text = _name;
+        nameText.text = playerInfo.name;
     }
 
     private void UIUpdateLevel()
     {
-        levelText.text = string.Format($"Level {_level}"); 
+        levelText.text = string.Format($"Level {playerInfo.level}"); 
     }
 
     private void UIUpdategold()
     {
-        goldText.text = string.Format($"{_gold}");
+        goldText.text = string.Format($"{playerInfo.gold}");
     }
 
     private void UIUpdateExp()
     {
-        expSlider.value = _exp / _nextExp;
+        expSlider.value = playerInfo.exp / playerInfo.nextExp;
     }
 }

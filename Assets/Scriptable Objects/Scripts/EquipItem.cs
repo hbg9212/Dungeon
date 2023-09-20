@@ -9,13 +9,6 @@ public enum EquipType
     , Shield
 }
 
-public enum StatsType
-{
-    Health
-    , Damage
-    , Defense
-}
-
 [System.Serializable]
 public class EquipItemStats
 {
@@ -23,7 +16,7 @@ public class EquipItemStats
     public float value;
 }
 
-[CreateAssetMenu(fileName = "EquipItem", menuName = "New EquipItem")]
+[CreateAssetMenu(fileName = "EquipItem", menuName = "Item/EquipItem")]
 public class EquipItem : ScriptableObject
 {
     [Header("Info")]
