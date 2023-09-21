@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 632771c6cac97aa49abec15d04329b02, type: 3}
-  m_Name: Sword_Diamond
+  m_Name: Helmet_Nomall
   m_EditorClassIdentifier: 
-  displayName: "\uB2E4\uC774\uC544\uBAAC\uB4DC \uAC80"
-  description: "\uB9E4\uC6B0 \uAC15\uB825\uD55C \uAC80"
-  type: 0
-  icon: {fileID: 21300000, guid: fc0befe4a1632f546993ff730c4fca6f, type: 3}
+  displayName: "\uD5EC\uBA67"
+  description: "\uAE30\uBCF8 \uD5EC\uBA67"
+  type: 1
+  icon: {fileID: 21300000, guid: 8eb2ff5d15ad57044863329a435b3394, type: 3}
   stats:
-  - type: 1
-    value: 15
-  equipPrefab: {fileID: 6158142683267939363, guid: eae917d06ac773c4894f1fb2b6d246a6, type: 3}
+  - type: 2
+    value: 2
+  equipPrefab: {fileID: 6395824083426549626, guid: 1303d1b852bb1344c85da72ece9b2c3d, type: 3}

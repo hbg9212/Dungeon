@@ -7,6 +7,8 @@ public enum EquipType
     , Pitching
     , Armor
     , Shield
+
+    , Max
 }
 
 [System.Serializable]
